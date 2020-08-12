@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final questions = const [
     {
-      'qntext': 'What book does Joey get Rachel for her birthday?',
+      'qntext': 'What book does Joey get Rachel for her B\'day?',
       'answers': [
         {'text': 'Little Women', 'score': 0},
         {'text': 'The Shining', 'score': 1},
