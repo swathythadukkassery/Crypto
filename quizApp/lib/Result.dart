@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
 
 class Result extends StatelessWidget {
   @override
@@ -17,7 +16,10 @@ class Result extends StatelessWidget {
   }
 
   Widget build(BuildContext context) {
-    return Center(
+    return Container(
+      padding: EdgeInsets.only(top: 200.0),
+      width: double.infinity,
+      margin: EdgeInsets.all(10),
       child: Column(
         children: <Widget>[
           Text(
