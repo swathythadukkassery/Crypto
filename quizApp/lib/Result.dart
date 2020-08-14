@@ -8,9 +8,9 @@ class Result extends StatelessWidget {
   String get resultPhrase {
     String resultText;
     if (res > 0) {
-      resultText = 'You are awesome';
+      resultText = 'Your Score is';
     } else {
-      resultText = 'Keep Trying';
+      resultText = 'Keep Trying, Your Score is:';
     }
 
     return resultText;
@@ -24,6 +24,13 @@ class Result extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(
+              "https://i.pinimg.com/736x/a7/04/c6/a704c607c003cc4fd20af4fe3f97ed8e.jpg"),
+          fit: BoxFit.cover,
+        ),
+      ),
       padding: EdgeInsets.only(top: 200.0),
       width: double.infinity,
       margin: EdgeInsets.all(10),
@@ -38,17 +45,20 @@ class Result extends StatelessWidget {
           Text(
             resu,
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.blue),
-            textAlign: TextAlign.center,
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                color: Colors.red[900]),
+            textAlign: TextAlign.end,
           ),
-          FlatButton(
+          RaisedButton(
+            color: Colors.black,
             child: Text(
               'Restart Quiz',
               style: TextStyle(fontSize: 30),
             ),
-            textColor: Colors.deepPurple,
+            textColor: Colors.amber,
             onPressed: restartHandler,
-          )
+          ),
         ],
       ),
     );

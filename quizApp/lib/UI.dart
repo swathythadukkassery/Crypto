@@ -6,7 +6,8 @@ class UI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        padding: EdgeInsets.all(30),
+        color: Colors.redAccent,
+        padding: EdgeInsets.all(45),
         child: new Column(
           children: <Widget>[
             Text(
@@ -14,14 +15,14 @@ class UI extends StatelessWidget {
               style: TextStyle(
                   fontFamily: 'Aleo',
                   fontSize: 30,
-                  color: Colors.black,
+                  color: Colors.lightBlue,
                   fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             FlatButton(
               child: Text(
                 'START',
-                style: TextStyle(fontSize: 25, color: Colors.blue),
+                style: TextStyle(fontSize: 25, color: Colors.blueGrey),
                 textAlign: TextAlign.center,
               ),
               onPressed: startHandler,
@@ -32,7 +33,7 @@ class UI extends StatelessWidget {
               decoration: new BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
-                          'https://i.pinimg.com/236x/e8/74/83/e87483a7448165b5fc9a605327d243c5.jpg'),
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQL5KnraMfmz0PicP7a1NsP1pfPVpVk-QbVxA&usqp=CAU'),
                       fit: BoxFit.fill),
                   shape: BoxShape.circle),
             ),
