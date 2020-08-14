@@ -5,13 +5,17 @@ class UI extends StatelessWidget {
   UI(this.startHandler);
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return new Container(
         padding: EdgeInsets.all(30),
-        child: Column(
+        child: new Column(
           children: <Widget>[
             Text(
               'Welcome to Friends Quiz',
-              style: TextStyle(fontSize: 30, color: Colors.brown),
+              style: TextStyle(
+                  fontFamily: 'Aleo',
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             FlatButton(
@@ -21,7 +25,17 @@ class UI extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               onPressed: startHandler,
-            )
+            ),
+            new Container(
+              height: 300.0,
+              width: 300.0,
+              decoration: new BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          'https://i.pinimg.com/236x/e8/74/83/e87483a7448165b5fc9a605327d243c5.jpg'),
+                      fit: BoxFit.fill),
+                  shape: BoxShape.circle),
+            ),
           ],
         ));
   }

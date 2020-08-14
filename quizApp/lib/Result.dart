@@ -12,7 +12,14 @@ class Result extends StatelessWidget {
     } else {
       resultText = 'Keep Trying';
     }
+
     return resultText;
+  }
+
+  String get resu {
+    String resu;
+    resu = res.toString();
+    return resu;
   }
 
   Widget build(BuildContext context) {
@@ -28,12 +35,18 @@ class Result extends StatelessWidget {
                 fontSize: 36, fontWeight: FontWeight.bold, color: Colors.amber),
             textAlign: TextAlign.center,
           ),
+          Text(
+            resu,
+            style: TextStyle(
+                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.blue),
+            textAlign: TextAlign.center,
+          ),
           FlatButton(
             child: Text(
               'Restart Quiz',
               style: TextStyle(fontSize: 30),
             ),
-            textColor: Colors.lightBlueAccent,
+            textColor: Colors.deepPurple,
             onPressed: restartHandler,
           )
         ],
