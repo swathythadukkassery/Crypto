@@ -6,7 +6,6 @@ class UI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        color: Colors.redAccent,
         padding: EdgeInsets.all(45),
         child: new Column(
           children: <Widget>[
@@ -33,7 +32,7 @@ class UI extends StatelessWidget {
               decoration: new BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
-                          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQL5KnraMfmz0PicP7a1NsP1pfPVpVk-QbVxA&usqp=CAU'),
+                          'https://i.pinimg.com/originals/4e/a7/f8/4ea7f8eb6008ab85769c8e91f35f30a5.jpg'),
                       fit: BoxFit.fill),
                   shape: BoxShape.circle),
             ),
