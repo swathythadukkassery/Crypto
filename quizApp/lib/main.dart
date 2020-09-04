@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import './Quiz.dart';
 import './Result.dart';
-import './UI.dart';
 
 void main() {
   runApp(MyApp());
@@ -61,12 +60,6 @@ class _MyAppState extends State<MyApp> {
   var _qnindex = -1;
   var _totalScore = 0;
 
-  void start() {
-    setState(() {
-      _qnindex = 0;
-    });
-  }
-
   void restart() {
     setState(() {
       _qnindex = 0;
@@ -89,15 +82,19 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('The One With The Quiz'),
+          centerTitle: true,
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => answerqn(0),
+          child: Icon(Icons.arrow_forward),
         ),
         body: _qnindex < questions.length
-            ? (_qnindex >= 0
-                ? Quiz(
-                    answerqn: answerqn,
-                    qnindex: _qnindex,
-                    questions: questions,
-                  )
-                : UI(start))
+            ? Quiz(
+                answerqn: answerqn,
+                qnindex: _qnindex,
+                questions: questions,
+                start: restart,
+              )
             : Result(_totalScore, restart),
       ),
     );

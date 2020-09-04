@@ -6,6 +6,13 @@ class UI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                "https://i.pinimg.com/564x/cb/c1/74/cbc17461c00cd55c84fd8a39afdbdddd.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
         padding: EdgeInsets.all(45),
         child: new Column(
           children: <Widget>[
@@ -14,27 +21,23 @@ class UI extends StatelessWidget {
               style: TextStyle(
                   fontFamily: 'Aleo',
                   fontSize: 30,
-                  color: Colors.lightBlue,
+                  color: Colors.cyan[900],
                   fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
-            FlatButton(
-              child: Text(
+            RaisedButton.icon(
+              icon: Icon(Icons.arrow_drop_down_circle),
+              label: Text(
                 'START',
-                style: TextStyle(fontSize: 25, color: Colors.blueGrey),
+                style: TextStyle(fontSize: 25, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
+              color: Colors.amber,
               onPressed: startHandler,
             ),
             new Container(
               height: 300.0,
               width: 300.0,
-              decoration: new BoxDecoration(
-                  image: DecorationImage(
-                      image: NetworkImage(
-                          'https://i.pinimg.com/originals/4e/a7/f8/4ea7f8eb6008ab85769c8e91f35f30a5.jpg'),
-                      fit: BoxFit.fill),
-                  shape: BoxShape.circle),
             ),
           ],
         ));

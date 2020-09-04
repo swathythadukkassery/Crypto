@@ -16,13 +16,7 @@ class Result extends StatelessWidget {
     return resultText;
   }
 
-  String get resu {
-    String resu;
-    resu = res.toString();
-    return resu;
-  }
-
-  String a = 'Your score is :';
+  String a = 'Your score is : ';
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
@@ -36,6 +30,7 @@ class Result extends StatelessWidget {
       width: double.infinity,
       margin: EdgeInsets.all(10),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Text(
             resultPhrase,
@@ -43,24 +38,14 @@ class Result extends StatelessWidget {
                 fontSize: 36, fontWeight: FontWeight.bold, color: Colors.red),
             textAlign: TextAlign.right,
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-            Text(
-              a,
-              style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red[900]),
-              textAlign: TextAlign.end,
-            ),
-            Text(
-              resu,
-              style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red[900]),
-              textAlign: TextAlign.end,
-            ),
-          ]),
+          Text(
+            '$a$res',
+            style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                color: Colors.red[900]),
+            textAlign: TextAlign.end,
+          ),
           RaisedButton(
             color: Colors.black,
             child: Text(
